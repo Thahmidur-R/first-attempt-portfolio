@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+   <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+   <link rel="stylesheet" href="styles.css">
+   <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />  
+  </head>
+  <body>
+    <!--------navbar------->
+    <nav class="navbar navbar-expand-md bg-dark  ">
+      <a href="#home" class="navbar-brand  fs-3 ms-3">Thahmidur Rahman</a>
+      <button class="me-3 navbar-toggler "   type="button" data-bs-toggle="collapse"
+ data-bs-target="#btn">
+<i class="bx bx-menu bx-md"></i>
+</button>   
+<div class="collapse navbar-collapse " id="btn">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a href="#AboutMe" class="nav-link  mx-3 fs-5" >About me</a>
+          </li>
+        <!--- <li class="nav-item">
+            <a href="#Skills" class="nav-link mx-3 fs-5">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a href="#Experience" class="nav-link  mx-3 fs-5 ">Experience</a>
+          </li> -->
+          <li class="nav-item">
+            <a href="#Projects" class="nav-link  mx-3 fs-5">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a href="#ContactForm" class="nav-link  mx-3 fs-5">Contact me</a>
+          </li>
+          <li class="nav-item mode-toggler">
+            <button class="nav-item mode-toggler-btn">
+              <i class='bx bx-adjust mx-3 fs-5 text-white '></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-----Intro div-->
+    <div id="home" class="container-fluid intro intro-dark">
+  <div class="header-text">
+    
+    <h1>Hi, I am Thahmidur Rahman.</span></h1>
+    <p class="p-intro">A software developer based in London</p>
+  
+    </div>
+  </div>
+
+<!------- About Me-->
+    <div id="AboutMe" data-aos="fade-up"  data-aos-duration="700" >
+     <!-- <h2 class="text-center">About Me</h2>
+    <div class="container">
+      </div>
+    </div>-->
+    <div class="card AboutMe-card">
+      <h2 class="text-center card-title">About Me</h2>
+      <div class="tab-titles">
+        <p class="tab-links active-link profile-link" onclick="displayProfile()">Personal Profile</p>
+        <p class="tab-links skills-link" onclick="displaySkills()">Skills</p>
+        <p class="tab-links experience-link" onclick="displayExperience()">Experience</p>
+      </div>
+      <h5 class="card-subtitle">Personal Profile</h5>
+      <div class="card-text AboutMe-card-text">
+        I have recently graduated with a BSc(Hons) in Physics with a 2:1 from King's
+         College London. My passion for programming has led me to explore the
+          world of web development and through online self taught courses,
+         I have been able to build a solid foundation in front-end development, namely HTML, CSS, and Javascript. I am eager to enhance my existing proficiencies and learn new skills. I am excited to embark on 
+        this coding journey and if you want to join me, don't hesitate to 
+         <a href="#ContactForm">say Hello.</a>
+
+
+      </div>
+    </div>
+</div>
+    <!------- Skills-->
+ <!---   <div id="Skills" class="container">
+        <h2>Skills</h2>
+    </div>
+    
+    <div id="Experience" class="container">
+        <h2>Experience</h2>
+    </div> -->
+
+    <!------- Projects-->
+    <div id="Projects" data-aos="fade-up" data-aos-duration="700" data-aos-delay="300">
+      <h2 class="text-center">My Projects</h2>
+      <div class="container">
+        <div class="row align-items-stretch">
+          <div class="col-lg-4">
+            <div class="card custom-outline project-card">
+              <div class="card-body" >
+                <h2 class="card-title">Minesweeper (React.js)</h2>
+                <img src="images/minesweeper-ss.png" class="project-img">
+                <div class="card-text">
+                  This is my attempt at remaking minesweeper using React.js.
+                   I was able to work on using functional components and state hooks. 
+                   This helped me by improving my skills in sharing state between components
+                    and understanding how React manages state updates and re-renders. <br>
+<a class='project-link' href="https://github.com/Thahmidur-R/minesweeper-remake" target="_blank">
+  <i class='bx bxl-github'></i> Click to view the github repository
+</a>
+<br>
+<a class='project-link' href="https://thahmidur-r.github.io/minesweeper-remake/" target="_blank">
+  <i class='bx bxs-bomb'></i> Click to play the game
+</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card custom-outline project-card">
+              <div class="card-body" >
+                <h2 class="card-title">2048</h2>
+                <img src="images/2048-ss.png" class="project-img">
+                <div class="card-text">
+This project was my attempt at rebuilding the 2048 game using HTML, CSS and JS. Implementing mechanics such as merging and sliding tiles helped boost my understanding of algorithms and data structures.<br>
+<a class='project-link' href="https://github.com/Thahmidur-R/2048-clone" target="_blank">
+  <i class='bx bxl-github'></i> Click to view the github repository
+</a>
+<br>
+<a class='project-link' href="https://thahmidur-r.github.io/2048-clone/" target="_blank">
+  <i class='bx bx-play'></i> Click to play the game
+</a>
+          </div>
+        </div>
+      </div> 
+          </div>
+          <div class="col-lg-4">
+            <div class="card custom-outline project-card">
+              <div class="card-body" >
+                <h2 class="card-title">CodePen</h2>
+                <img src="images/codepen-ss.png" class="project-img codepen-img">
+                <div class="card-text">
+                  I have a collection of projects on codepen built using HTML, CSS, and JS, which I completed as part 
+                  of freeCodeCamp's curriculum on web development. These projects include a calculator and pomodoro timer built 
+                  using react and different charts (e.g. choropleth and heat map) built 
+                  using D3 and SVG after fetching and parsing data from a dataset. 
+<br>
+<a class='project-link' href="https://codepen.io/RahmanT/pens/public" target="_blank">
+  <i class='bx bxl-codepen' ></i> Click to view my codepen 
+</a>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    
+
+    <!------- Contact Form-->
+    
+    <div id="ContactForm" class="container" data-aos="fade-up" data-aos-duration="700">
+      <h2 class="text-center">Contact me</h2>
+      <div class="container">
+      
+<form novalidate name="submit-to-google-sheet" >
+  <div class="form-floating">
+  <input type="text" id='name' name="Name" placeholder="Full Name" class="form-control" required >
+  <label for="name" class="form-label">Full Name</label>
+  <div class="invalid-feedback invalid-name">Please enter your name</div>
+</div>
+<div class="form-floating">
+  <input type="email" id="email" name="Email" placeholder="email" class="form-control" required >
+  <label for="email" class="form-label" >Email</label>
+ 
+  <div class="invalid-feedback invalid-email">Invalid Email</div>
+</div>
+  <textarea rows="6" id="message" class='form-control placeholder-colour-dark ' name="Message" placeholder="Write message here... " required></textarea>
+  <div class="invalid-feedback invalid-message">Please enter a message</div>
+  <div>
+  <button type="submit" id="submit" name="submit" class="btn btn-outline-light custom-outline btn-block">Send</button>
+<div class="valid-feedback">Message sent successfully!</div>
+<div class="invalid-feedback invalid-submission">Failed to send message.</div>
+</div>
+</form>
+</div>
+    </div>
+    </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    AOS.init({
+  
+  
+
+  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+  offset: 120, // offset (in px) from the original trigger point
+  delay: 0, // values from 0 to 3000, with step 50ms
+  duration: 400, // values from 0 to 3000, with step 50ms
+  easing: 'ease', // default easing for AOS animations
+  once: false, // whether animation should happen only once - while scrolling down
+  mirror: false, // whether elements should animate out while scrolling past them
+  anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+
+});
+  </script>
+  
+	<script src="script.js"></script>
+  </body>
+</html>

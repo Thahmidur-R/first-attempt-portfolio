@@ -1,0 +1,245 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+ 
+  background-color: #080808;
+  color:#ffffff;
+}
+
+.card{
+  
+  background-color: #080808;
+  color:#ffffff;
+}
+
+.AboutMe-card{
+  border:none;
+}
+
+.custom-outline{
+  border-color: #ff004f;
+}
+
+h1:first-of-type {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;;
+}
+
+.p-intro {
+  font-family: "Open Sans", sans-serif;
+  font-weight:bold;
+}
+
+.navbar{
+  position:fixed;
+  width:100%;
+  top:0;
+  z-index: 100;
+}
+
+.navbar-brand,  .nav-link, .navbar-toggler{
+  color:#ffffff
+}
+.navbar-toggler:focus{
+    box-shadow: none;
+}
+
+ 
+ .nav-link:hover {
+    background-color: lightgray;
+    color:black !important;;
+  }
+
+  .mode-toggler{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+ .mode-toggler-btn{
+  background: none;
+  border:transparent;
+  
+ }
+
+ 
+  .intro{
+    
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height:30vh;
+  padding-top:60px;
+ 
+  }
+
+  .intro-dark{
+    background-image:url('images/wp3260613-black-n-red-wallpaper.jpg');
+    background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  }
+.intro-light{
+background-image: url('images/wp8190969-white-and-red-shards-wallpapers.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#Skills,#Experience,#Projects,#ContactForm{
+  padding-top:50px;
+}
+
+
+.AboutMe-card-text{
+  padding-top:15px;
+}
+.skills-card{
+  
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.skills_skill {
+  padding: 1rem 2rem;
+  margin-bottom: 1.5rem;
+  margin-right: 1.5rem;
+  font-size: 1.6rem;
+  background: rgba(153,153,153,.2);
+  border-radius: 5px;
+  font-weight: 600;
+  color: #666;
+}
+
+.experience-card{
+
+}
+
+.tab-titles{
+  display: flex;
+  justify-content: center;
+  margin:20px 0 40px;
+}
+
+.tab-links{
+  margin-right:50px;
+  font-size: 18px;
+  cursor: pointer;
+  position:relative;
+}
+.tab-links::after{
+  content:'';
+  width:0;
+  height:3px;
+  background:#ff004f;
+  position:absolute;
+  left:0;
+  transition:0.5s;
+  bottom:-8px;
+}
+
+.tab-links.active-link::after{
+width:50%;
+}
+.card-text {
+  text-align: justify;
+}
+
+.project-card{
+  width:90%;
+  height:100%;
+}
+
+.project-img{
+  width:95%;
+  height:340px;
+}
+
+.codepen-img{
+  width:100%;
+}
+
+
+
+form{width:100%}
+
+.form-control{
+  background:#262626 !important;
+  color:#ffffff !important;
+  outline:none;
+  border:0;
+  padding:15px;
+  border-radius: 6px;
+  font-size:18px;
+  margin: 15px 0;
+}
+
+.placeholder-colour-dark::placeholder{
+  color:#ffffff
+}
+
+.placeholder-colour-light::placeholder{
+  color:#080808;
+}
+
+label{
+  color:#ffffff;
+}
+
+#ContactForm{
+  margin-bottom: 15px;
+}
+
+
+
+
+@media (min-width: 1200px) {
+  .card-subtitle, .AboutMe-card {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
+
+  @media (min-width:600px){
+    .intro{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      height:30vh
+    }
+    .mode-toggler-btn{
+      
+      display: flex;
+      align-items: center;
+     }
+  
+    
+  }
+
+  @media (max-width: 1000px) {
+    .col-lg-4{
+      padding-bottom: 10px;
+    }
+    
+  }
+  @media (min-width: 980px) {
+    #ContactForm{
+      width:50%;
+    }
+    
+  }
+  @media (min-width: 1300px) {
+    #ContactForm{
+      width:30%;
+    }
+    
+  }
