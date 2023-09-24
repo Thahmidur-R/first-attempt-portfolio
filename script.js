@@ -4,8 +4,12 @@ let cards=document.querySelectorAll('.card');
 let formControls=document.querySelectorAll('.form-control');
 let labels=document.querySelectorAll('label');
 let textarea=document.querySelector('textarea');
+
 const form = document.querySelector('form[name="submit-to-google-sheet"]');
-const technologies = ['HTML', 'CSS', 'JS', 'React', 'Bootstrap', 'GIT', 'SQL basics', 'Responsive design'];
+const technologies = ['Java', 'Servlets','HTML', 'CSS', 'JS', 'React', 'Bootstrap',
+ 'GIT', 'MySQL', 'Responsive design'
+];
+
 const items = [
     "BSc(Hons) 2:1 Physics from King's College London",
     "QA software development level 4 course",
@@ -16,7 +20,9 @@ const items = [
 document.querySelector('.mode-toggler-btn').onclick=()=>{
     let intro =document.querySelector('.intro');
     let body=document.querySelector('body');
-    
+    let skillsCards = document.querySelectorAll('.skills_skill');
+
+
     if(document.querySelector('.intro-dark')){
         intro.classList.remove('intro-dark');
         intro.classList.add('intro-light');
@@ -31,6 +37,11 @@ document.querySelector('.mode-toggler-btn').onclick=()=>{
             formControl.style.setProperty('color', '#080808', 'important');
             
         });
+        skillsCards.forEach(function(skillCard){
+            skillCard.style.setProperty('background', 'rgba(153,153,153,.2)', 'important');
+             skillCard.style.setProperty('color', '#605f5f', 'important');
+             console.log("skill changing");
+         });
         labels.forEach(function(label){
             label.style.color='#080808';
          });
@@ -56,7 +67,11 @@ document.querySelector('.mode-toggler-btn').onclick=()=>{
              formControl.style.setProperty('color', '#ffffff', 'important');
              
          });
-         
+         skillsCards.forEach(function(skillCard){
+            skillCard.style.setProperty('background', 'rgba(183, 182, 182, 0.2)', 'important');
+             skillCard.style.setProperty('color', '#919090', 'important');
+             console.log("skill changing");
+         });
          labels.forEach(function(label){
             label.style.color='#ffffff';
          });
@@ -68,6 +83,11 @@ document.querySelector('.mode-toggler-btn').onclick=()=>{
         return
     }
 }
+
+
+
+
+
 
 
 function displayProfile(){
@@ -91,9 +111,31 @@ document.querySelector('.AboutMe-card-text').classList.add('skills-card');
 technologies.forEach((technology) => {
     const div = document.createElement('div');
     div.classList.add('skills_skill');
+    
+    
+    
+    
     div.textContent = technology;
     cardText.appendChild(div);
-  });
+});
+    let skillsCards = document.querySelectorAll('.skills_skill');
+    if(document.querySelector('.intro-light')){
+    
+        skillsCards.style
+        skillsCards.forEach(function(skillCard){
+            skillCard.style.setProperty('background-color', 'rgba(153,153,153,.2)', 'important');
+             skillCard.style.setProperty('color', '#605f5f', 'important');
+            
+         });
+        }
+        else if(document.querySelector('.intro-dark')){
+            skillsCards.forEach(function(skillCard){
+                skillCard.style.setProperty('background-color', 'rgba(183, 182, 182, 0.2)', 'important');
+                 skillCard.style.setProperty('color', '#919090', 'important');
+                 
+             });
+            }
+ 
 }
 
 function displayExperience(){
@@ -113,6 +155,16 @@ function displayExperience(){
     
     cardText.appendChild(ul);
 }
+
+const video = document.querySelector('video');
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'ArrowLeft') {
+    video.currentTime -= 5; // Skips back 5 seconds
+  } else if (event.key === 'ArrowRight') {
+    video.currentTime += 5; // Skips forward 5 seconds
+  }
+});
 
 
 document.querySelector('form').addEventListener('submit',function validateForm(event) {
@@ -146,14 +198,10 @@ document.querySelector('form').addEventListener('submit',function validateForm(e
     return false;
   }
   console.log('should be sending')
-    // If email is valid, the form will be submitted
+    
     const scriptURL = 'https://script.google.com/macros/s/AKfycbyjL_boDaaJ5mn40tPHmVb9aBa1LSdOR3ZtqKguSabjeqLmU6elG8XXzJVzKhOyri_P/exec'
-   // const form = document.forms['submit-to-google-sheet']
-   /*const form = document.querySelector('form[name="submit-to-google-sheet"]');
-    form.addEventListener('submit', e => {
-        console.log('first')
-        e.preventDefault();*/
-        console.log('second')
+ 
+        
         fetch(scriptURL, { method: 'POST', body: new FormData(form)})
           .then(response => {console.log('Success!', response);
           nameInput.value = '';
@@ -167,45 +215,5 @@ document.querySelector('form').addEventListener('submit',function validateForm(e
         })
       })
 
-  
-/*form.addEventListener('submit', event=>{
-    if(!form.checkValidity()){
-        event.preventDefault()
-    }
-    form.classList.add('was-validated')
-})
-
-const nameInput = document.querySelector('#name');
-const emailInput = document.querySelector('#email');
-const messageInput = document.querySelector('#message');
-const submitBtn= document.querySelector('#submit');
-
-const publicKey='32QaYQiTpufZjgCe6';
-const serviceID='service_q3t6zfx';
-const templateID='template_jj56rqi';
-emailjs.init(publicKey);
-
-document.querySelector('#submit').onclick=(event)=>{
-event.preventDefault();
-
-const inputFields={
-    name: nameInput.value,
-    email: emailInput.value,
-    message: messageInput.value
-}
-
-emailjs.send(serviceID, templateID, inputFields).then(()=>{
-    //something to show message has sent
-    submitBtn.innerText='Message sent successfully'
-    nameInput.value='',
-    emailInput.value='',
-    messageInput.value='';
-}, (error)=>{
-    console.log(error)
-    alert('There has been an error in sending ypur message')
-    //something to show an error has occured
-}
-)
-}*/
 
 
