@@ -160,6 +160,9 @@ width:50%;
   width:95%;
   height:340px;
 }
+.img-2048{
+  margin-top:40px;
+}
 .foodShopVideo{
   padding-top: 10px;
   width:100%;
@@ -172,6 +175,7 @@ width:50%;
 }
 .codepen-img{
   width:100%;
+  margin-top:40px;
 }
 
 
